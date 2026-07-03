@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelly Jungle</title>
+    
+    <!-- קישור לקובץ העיצוב החיצוני -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Shelly's Jungle!</h1>
+        <p>Click on an animal or press its starting letter on the keyboard to hear its sound.</p>
+    </header>
+
+    <!-- אלמנט שמע (Audio) עבור מנגינת הרקע. יופעל דרך ה-JS בטעינת העמוד -->
+    <audio id="bgMusic">
+        <source src="sounds/background.m4a" type="audio/mpeg">
+    </audio>
+
+    <!-- אזור החיות (משתמש ב-Flexbox ב-CSS כדי להיות רספונסיבי) -->
+    <main class="jungle-container">
+        
+        <!-- נגדיר 7 חיות. לכל חיה יש תמונה, וקובץ אודיו משלה -->
+        <div class="animal-card" data-key="c">
+            <img src="images/cat.jpg" alt="Cat" id="catImg">
+            <p>Press 'C'</p>
+            <audio id="catSound" src="sounds/cat.mp3"></audio>
+        </div>
+
+        <div class="animal-card" data-key="w">
+            <img src="images/cow.jpg" alt="Cow" id="cowImg">
+            <p>Press 'W'</p>
+            <audio id="cowSound" src="sounds/cow.mp3"></audio>
+        </div>
+
+        <div class="animal-card" data-key="g">
+            <img src="images/pig.jpg" alt="Pig" id="pigImg">
+            <p>Press 'G'</p>
+            <audio id="pigSound" src="sounds/pig.mp3"></audio>
+        </div>
+
+        <div class="animal-card" data-key="m">
+            <img src="images/monkey.jpg" alt="Monkey" id="monkeyImg">
+            <p>Press 'M'</p>
+            <audio id="monkeySound" src="sounds/monkey.mp3"></audio>
+        </div>
+
+        <div class="animal-card" data-key="p">
+            <img src="images/parrot.jpg" alt="Parrot" id="parrotImg">
+            <p>Press 'P'</p>
+            <audio id="parrotSound" src="sounds/parrot.mp3"></audio>
+        </div>
+
+        <div class="animal-card" data-key="s">
+            <img src="images/snake.jpg" alt="Snake" id="snakeImg">
+            <p>Press 'S'</p>
+            <audio id="snakeSound" src="sounds/snake.mp3"></audio>
+        </div>
+
+        <div class="animal-card" data-key="t">
+            <img src="images/tiger.jpg" alt="Tiger" id="tigerImg">
+            <p>Press 'T'</p>
+            <audio id="tigerSound" src="sounds/tiger.mp3"></audio>
+        </div>
+
+    </main>
+
+    <!-- קישור לקובץ ה-JavaScript החיצוני בתחתית ה-Body כדי להבטיח שהדף נטען קודם -->
+    <script src="script.js"></script>
+</body>
+</html>
